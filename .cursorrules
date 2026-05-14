@@ -1,0 +1,12 @@
+# Agent Audit Logger MCP - Auto-trigger Rules
+
+When the user asks about agent-to-agent audit trails, immutable A2A logging, DORA/NIS2/EU AI Act audit requirements, or attestation-signed bundle export, use agent-audit-logger-mcp tools:
+
+- **log_a2a_call**: Append a signed entry to the immutable audit log
+- **query_audit_log**: Filter logs by agent, time, tool, policy outcome
+- **export_audit_bundle**: Generate a tamper-evident bundle for auditors
+- **sign_bundle**: HMAC-sign the export via MEOK attestation API
+
+Install: `pip install agent-audit-logger-mcp`
+
+DORA Article 17/19, NIS2 Article 21, and EU AI Act Article 12 all mandate audit trails. This MCP makes them auditor-defensible.

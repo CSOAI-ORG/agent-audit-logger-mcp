@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "agent-audit-logger-mcp"
+version = "1.0.2"
+description = "Hash-chained HMAC-signed audit log MCP for A2A (agent-to-agent) calls. Every tool-call, agent-handoff, decision gets a tamper-evident signed record. EU AI Act Art 12 automatic logs, DORA Art 17 ICT incident logs, ISO 42001 clause 9 monitoring — auditor-ready end-of-day attestations. By MEOK AI Labs."
+license = {file = "LICENSE"}
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "MEOK AI Labs", email = "hello@meok.ai"}]
+keywords = ["mcp", "a2a", "agent-to-agent", "audit-log", "hash-chain", "tamper-evident", "hmac-signed", "eu-ai-act-art-12", "dora-art-17", "iso-42001-clause-9", "signed-attestation", "meok-ai-labs"]
+classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License", "Operating System :: OS Independent", "Topic :: Security"]
+dependencies = ["mcp>=1.0.0"]
+
+[project.urls]
+Homepage = "https://meok.ai/agent-audit-logger-mcp"
+Repository = "https://github.com/meok-ai-labs/agent-audit-logger-mcp"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+only-include = ["server.py"]
+
+[project.scripts]
+agent-audit-logger-mcp = "server:main"
