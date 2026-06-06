@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "agent-audit-logger-mcp"
-version = "1.1.0"
+version = "1.1.2"
 description = "Hash-chained HMAC-signed audit log MCP for A2A (agent-to-agent) calls. Every tool-call, agent-handoff, decision gets a tamper-evident signed record. EU AI Act Art 12 automatic logs, DORA Art 17 ICT incident logs, ISO 42001 clause 9 monitoring — auditor-ready end-of-day attestations. By MEOK AI Labs."
 license = {file = "LICENSE"}
 readme = "README.md"
