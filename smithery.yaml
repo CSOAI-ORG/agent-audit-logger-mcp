@@ -1,0 +1,29 @@
+name: agent-audit-logger-mcp
+description: 'MCP server: agent-audit-logger-mcp'
+version: 1.0.5
+author: MEOK AI Labs
+homepage: https://safetyof.ai
+repository: https://github.com/MEOK-AI-Labs/agent-audit-logger-mcp
+license: MIT
+categories:
+- compliance
+- governance
+tools:
+- name: log
+  description: Append a signed, hash-chained log entry.
+- name: verify_chain
+  description: Re-verify the integrity of the log chain for a tenant.
+- name: search
+  description: Query the log. Empty filters match everything. Returns newest-first.
+- name: daily_stats
+  description: Return daily log volume stats for a tenant.
+- name: sign_day_attestation
+  description: Emit a signed attestation certifying the log integrity + volume for
+    a given day.
+build:
+  type: python
+  entrypoint: server.py
+  dependencies:
+  - mcp>=1.0.0
+runtime:
+  python: '>=3.10'
