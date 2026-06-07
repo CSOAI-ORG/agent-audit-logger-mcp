@@ -34,8 +34,8 @@ npx -y @smithery/cli@latest install agent-audit-logger-mcp --client claude
 ## 📖 Documentation
 
 - [Full Documentation](https://docs.meok.ai/agent-audit-logger-mcp)
-- [API Reference](https://api.meok.ai)
-- [EU AI Act Compliance Guide](https://councilof.ai/compliance)
+- [API Reference](https://meok-attestation-api.vercel.app)
+- [EU AI Act Compliance Guide](https://councilof.ai)
 
 ## 🛡️ Compliance
 
@@ -50,20 +50,20 @@ This MCP server is built with **EU AI Act compliance** built-in:
 - **Pro £199/mo** — unlimited + signed end-of-day attestations + chain integrity reports — [subscribe](https://buy.stripe.com/5kQ6oJ0xS3ce8sl7ew8k91j)
 - **Enterprise £1,499/mo** — multi-tenant + SIEM webhook push + retention policy — [subscribe](https://buy.stripe.com/5kQ6oJ0xS3ce8sl7ew8k91j)
 
-Need help getting compliant? **[Book a free 15-min diagnostic →](https://cal.com/csoai/august-audit)**
+Need help getting compliant? **[Book a free 15-min diagnostic →](mailto:nicholas@meok.ai?subject=Compliance%20diagnostic)**
 
 ## 🏢 Enterprise
 
 Need custom development, SLA guarantees, or white-label deployment?
 
-- **Pro:** $99/mo — Full MCP suite + EU AI Act tracking
-- **Enterprise:** $499/mo — Custom dev + SLA + Dedicated support
+- **Pro:** £79/mo — Full MCP suite + EU AI Act tracking
+- **Enterprise:** £499/mo — Custom dev + SLA + Dedicated support
 
-[View Pricing →](https://councilof.ai/pricing) | [Contact Sales →](mailto:sales@csoai.org)
+[View Pricing →](https://councilof.ai/payg) | [Contact Sales →](mailto:sales@meok.ai)
 
 ## 🤝 Part of the MEOK Ecosystem
 
-This server is part of the **[MEOK AI Labs](https://meok.ai)** ecosystem — 300+ MCP servers for sovereign AI governance.
+This server is part of the **[MEOK AI Labs](https://meok.ai)** ecosystem — 26 PyPI packages · ~16,300 monthly installs.
 
 | Domain | Purpose |
 |--------|---------|
