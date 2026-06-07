@@ -1,0 +1,68 @@
+{
+  "name": "agent-audit-logger-mcp",
+  "description": "Hash-chained HMAC-signed audit log MCP for A2A (agent-to-agent) calls. Every tool-call, agent-ha...",
+  "url": "https://proofof.ai/scorecard/agent-audit-logger-mcp.html",
+  "version": "1.1.3",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "log",
+      "name": "Log",
+      "description": "log via agent-audit-logger-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "verify_chain",
+      "name": "Verify Chain",
+      "description": "verify_chain via agent-audit-logger-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "search",
+      "name": "Search",
+      "description": "search via agent-audit-logger-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "daily_stats",
+      "name": "Daily Stats",
+      "description": "daily_stats via agent-audit-logger-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "sign_day_attestation",
+      "name": "Sign Day Attestation",
+      "description": "sign_day_attestation via agent-audit-logger-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
