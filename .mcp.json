@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "agent-audit-logger-mcp": {
+      "command": "uvx",
+      "args": [
+        "agent-audit-logger-mcp"
+      ]
+    }
+  }
+}
