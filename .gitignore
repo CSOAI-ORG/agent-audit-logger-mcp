@@ -4,3 +4,6 @@ dist/agent_audit_logger_mcp-1.1.6-py3-none-any.whl
 dist/agent_audit_logger_mcp-1.1.6.tar.gz
 dist/agent_audit_logger_mcp-1.1.7-py3-none-any.whl
 dist/agent_audit_logger_mcp-1.1.7.tar.gz
+
+# Auto-added during alignment sweep
+__pycache__/server.cpython-311.pyc
