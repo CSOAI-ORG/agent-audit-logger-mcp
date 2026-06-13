@@ -1,0 +1,17 @@
+{
+  "name": "knowing_yucca/agent-audit-logger-mcp",
+  "title": "MEOK Agent Audit Logger Mcp",
+  "description": "Compliance MCP server: agent-audit-logger-mcp",
+  "readme": "# MEOK Agent Audit Logger Mcp\n\nCompliance MCP from MEOK AI.",
+  "categories": [
+    "AI",
+    "Compliance",
+    "Governance"
+  ],
+  "defaultRunInput": {
+    "tool": "quick_scan",
+    "arguments": {
+      "system": "example"
+    }
+  }
+}

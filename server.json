@@ -5,7 +5,8 @@
   "description": "Hash-chained HMAC-signed audit log MCP for A2A (agent-to-agent) calls. Every tool-call, agent-ha...",
   "repository": {
     "url": "https://github.com/CSOAI-ORG/agent-audit-logger-mcp",
-    "source": "github"
+    "source": "github",
+    "id": "1238513480"
   },
   "packages": [
     {
