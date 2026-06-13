@@ -1,0 +1,5 @@
+{
+  "name": "agent-audit-logger-mcp",
+  "description": "Immutable audit trail logging for agent actions with cryptographic signatures.",
+  "version": "1.1.5"
+}
