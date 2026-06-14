@@ -1,28 +1,83 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.CSOAI-ORG/agent-audit-logger-mcp",
-  "version": "1.1.7",
-  "description": "Hash-chained HMAC-signed audit log MCP for A2A (agent-to-agent) calls. Every tool-call, agent-ha...",
+  "name": "CSOAI-ORG/agent-audit-logger-mcp",
+  "title": "Audit Logger",
+  "version": "1.1.5",
+  "description": "Immutable audit trail logging for agent actions with cryptographic signatures. Part of the MEOK 28-hive MCP governance mesh. 13 unified frameworks + attestation chain.",
+  "websiteUrl": "https://meok.ai/agent-audit-logger-mcp",
   "repository": {
+    "type": "git",
     "url": "https://github.com/CSOAI-ORG/agent-audit-logger-mcp",
-    "source": "github",
-    "id": "1238513480"
+    "source": "https://github.com/CSOAI-ORG/agent-audit-logger-mcp"
   },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/CSOAI-ORG/agent-audit-logger-mcp/main/assets/icon.svg",
+      "mimeType": "image/svg+xml",
+      "sizes": [
+        "256x256"
+      ],
+      "theme": "dark"
+    }
+  ],
   "packages": [
     {
       "registryType": "pypi",
       "identifier": "agent-audit-logger-mcp",
-      "version": "1.1.7",
-      "runtimeHint": "python",
+      "version": "1.1.5",
       "transport": {
         "type": "stdio"
       }
     }
   ],
-  "remotes": [
-    {
-      "type": "streamable-http",
-      "url": "https://api.meok.ai/v1/a2a/audit-logger"
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "category": "ai-governance",
+      "subcategories": [
+        "compliance",
+        "audit"
+      ],
+      "tier": "flagship",
+      "openSsfScorecard": "7.06/10"
     }
+  },
+  "metadata": {
+    "publisher": "MEOK AI Labs",
+    "categories": [
+      "compliance",
+      "ai-governance"
+    ]
+  },
+  "examples": [
+    {
+      "name": "Quick scan via agent-audit-logger-mcp",
+      "description": "Run a compliance check using the MCP server.",
+      "input": {
+        "tool": "quick_scan",
+        "arguments": {
+          "system": "example"
+        }
+      }
+    }
+  ],
+  "resources": [
+    {
+      "uri": "https://docs.meok.ai/agent-audit-logger-mcp/",
+      "name": "agent-audit-logger-mcp documentation",
+      "mimeType": "text/html"
+    },
+    {
+      "uri": "https://github.com/CSOAI-ORG/agent-audit-logger-mcp",
+      "name": "agent-audit-logger-mcp on GitHub",
+      "mimeType": "text/html"
+    }
+  ],
+  "publisher": {
+    "name": "CSOAI Ltd",
+    "url": "https://csoai.org"
+  },
+  "categories": [
+    "compliance",
+    "ai-governance"
   ]
 }

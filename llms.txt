@@ -1,39 +1,33 @@
 # agent-audit-logger-mcp
-# Purpose: Immutable append-only signed audit log for every agent-to-agent transaction.
-# Context: DORA Art 17/19, NIS2 Art 21, EU AI Act Art 12 all mandate audit trails. Piggybacks on MEOK attestation API.
+> Audit Logger Immutable audit trail logging for agent actions with cryptographic signatures. By MEOK AI Labs.
 
 ## Install
-```bash
 pip install agent-audit-logger-mcp
-```
 
-## Auth & Rate Limits
-- Free tier: 10 calls/day. No API key required.
-- Pro tier (£79/mo): unlimited + signed attestations. https://buy.stripe.com/aFa7sNcgAdQS0ZT1Uc8k91t
-- Enterprise (£1,499/mo): white-label + on-premise. hello@meok.ai
-- All tools accept optional `api_key` parameter.
+## Auth
+- Free tier: 100 calls/month, no API key needed
+- Pro tier: unlimited, set MEOK_API_KEY env var
 
-## Tools (5)
+## Tools
 
-### `log(tenant_id: str, from_agent: str, to_agent: str, action: str, payload_hash: str = "", outcome: str = "success", context_csv: str = "")`
-Append a signed, hash-chained log entry.
+### quick_scan
+Instant compliance check from a system description. No API key required.
+- `system` (str): One-sentence AI system description
+- Returns: compliance_status, top_obligations
 
-### `verify_chain(tenant_id: str)`
-Re-verify the integrity of the log chain for a tenant.
+### deadline_check
+Regulatory deadlines with days remaining.
+- Returns: List of dates with days_remaining
 
-### `search(tenant_id: str, from_agent: str = "", to_agent: str = "", action: str = "", outcome: str = "", limit: int = 50)`
-Query the log. Empty filters match everything. Returns newest-first.
+### framework_scan
+Detailed compliance assessment.
+- `framework` (str, required): AGENT or other framework
+- `system` (str, required): System description
+- Returns: compliance_score, gaps, remediation
 
-### `daily_stats(tenant_id: str)`
-Return daily log volume stats for a tenant.
+## Endpoints
+- MCP: https://gateway.meok.ai/mcp
+- A2A: https://gateway.meok.ai/.well-known/agent-card.json
 
-### `sign_day_attestation(tenant_id: str, date_utc: str, email: str = "")`
-Emit a signed attestation certifying the log integrity + volume for a given day.
-
-## Pairs with
-- `meok-attestation-verify` — public verification of signed certs
-- `meok-attestation-api` (https://meok-attestation-api.vercel.app) — HMAC signing endpoint
-- Other MEOK governance MCPs via `mcp_bridge_call`
-
-## Maintainer
-MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+## License
+MIT — https://github.com/CSOAI-ORG/agent-audit-logger-mcp/blob/main/LICENSE
