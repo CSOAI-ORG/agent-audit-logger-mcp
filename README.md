@@ -138,3 +138,32 @@ buyers can deploy without vendor-lock-in objections.
 
 <!-- BUY-LADDER:END -->
 
+## See also
+
+MEOK compliance MCP fleet:
+[`agent-incident-relay-mcp`](https://github.com/CSOAI-ORG/agent-incident-relay-mcp), [`meok-eu-ai-act-art-13-ifu-mcp`](https://github.com/CSOAI-ORG/meok-eu-ai-act-art-13-ifu-mcp)
+
+
+## Configuration
+
+Add to your `claude_desktop_config.json` (Claude Desktop) or your MCP client config:
+
+```json
+{
+  "mcpServers": {
+    "agent-audit-logger-mcp": {
+      "command": "uvx",
+      "args": ["agent-audit-logger-mcp"]
+    }
+  }
+}
+```
+
+Or: `pip install agent-audit-logger-mcp` then run the `agent-audit-logger-mcp` command (stdio transport).
+
+## Examples
+
+Once configured, ask your assistant, for example:
+- "Use `log` to …"
+- "Use `verify_chain` to …"
+- "Use `search` to …"
