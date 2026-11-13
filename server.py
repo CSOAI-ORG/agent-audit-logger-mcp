@@ -21,8 +21,6 @@ USE CASES:
 
 PRICING:
   - Free — 1,000 log entries/day, ephemeral
-  - Pro £199/mo — unlimited + signed end-of-day attestation + chain verification
-  - Enterprise £1,499/mo — multi-tenant + SIEM webhook push + retention policy
 
 Install: pip install agent-audit-logger-mcp
 Run:     python server.py
@@ -74,8 +72,8 @@ def check_access(api_key: str = ""):
     return _shared_check_access(api_key)
 
 
-STRIPE_199 = "https://buy.stripe.com/aFa7sNcgAdQS0ZT1Uc8k91t"
-STRIPE_1499 = "https://buy.stripe.com/aFa7sNcgAdQS0ZT1Uc8k91t"
+STRIPE_199 = "https://meok.ai/pricing"
+STRIPE_1499 = "https://meok.ai/pricing"
 
 
 # ── Log signing key (local fallback — production uses attestation-api)  ─────
@@ -298,7 +296,7 @@ def sign_day_attestation(tenant_id: str, date_utc: str, api_key: str = "", email
         return json.dumps({"error": msg, "upgrade_url": STRIPE_199})
     if tier == "free":
         return json.dumps({
-            "error": "Signed day attestations require Pro (£199/mo) or Enterprise tier.",
+            "error": "Signed day attestations require Pro or Enterprise tier.",
             "upgrade_url": STRIPE_199,
         })
 
@@ -357,10 +355,10 @@ if __name__ == "__main__":
     main()
 
 
-# ── MEOK monetization layer (Stripe upgrade · PAYG · pricing) ──────────
-# Free tier is zero-config. Upgrade to Pro (unlimited) or pay-as-you-go per call.
+# ── MEOK pricing pointer (pay per delivered job; no subscriptions) ──────────
+# No tiers. Jobs are quoted individually at https://meok.ai/pricing.
 import os as _meok_os
-MEOK_STRIPE_UPGRADE = "https://buy.stripe.com/aFa7sNcgAdQS0ZT1Uc8k91t"  # Pro (unlimited)
+MEOK_STRIPE_UPGRADE = "https://meok.ai/pricing"  # Pro (unlimited)
 MEOK_PAYG_KEY = _meok_os.environ.get("MEOK_PAYG_KEY", "")  # set to enable PAYG (x402 / ~GBP0.05 per call)
 MEOK_PRICING = "https://meok.ai/pricing"
 
